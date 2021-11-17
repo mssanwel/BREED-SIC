@@ -4,6 +4,7 @@ void setup() {
 }
 
 void loop() {
-   String c;
+  String c = Serial.readString();
+  // Just enter the number in the serial monitor click enter, the message typed into the monitor will be sent
    Serial.println(c);
 }
