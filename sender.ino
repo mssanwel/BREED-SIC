@@ -1,10 +1,13 @@
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
 }
 
+String c = "";
+
 void loop() {
-  String c = Serial.readString();
-  // Just enter the number in the serial monitor click enter, the message typed into the monitor will be sent
-   Serial.println(c);
+   if (Serial.available() > 0)
+   {
+      c = Serial.readString();
+      Serial.print(c);
+   }
 }
